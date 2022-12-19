@@ -5,11 +5,13 @@ import Home from './components/Home/Home';
 import MainHeader from './components/MainHeader/MainHeader';
 
 function App() {
+
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
+    // finds the value of 'isLoggedIn'
     const storedUserLogin = localStorage.getItem("isLoggedIn")
-
+    // if the value is 1, sets isLoggedIn to true
     if (storedUserLogin === 1) {
       setIsLoggedIn(true)
     }
