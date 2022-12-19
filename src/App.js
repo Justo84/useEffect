@@ -15,6 +15,7 @@ function App() {
     if (storedUserLogin === 1) {
       setIsLoggedIn(true)
     }
+    // there are no dependencies, so this will not trigger automatically after inital run
   }, [])
 
   const loginHandler = (email, password) => {
