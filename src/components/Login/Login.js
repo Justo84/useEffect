@@ -28,10 +28,13 @@ const Login = (props) => {
   };
 
   const validateEmailHandler = () => {
+    console.log(`validateEmailHandler`)
     setEmailIsValid(enteredEmail.includes('@'));
+    console.log(`useState emailvalid: ${emailIsValid}`)
   };
 
   const validatePasswordHandler = () => {
+    console.log("validatePasswordHandler")
     setPasswordIsValid(enteredPassword.trim().length > 6);
   };
 
