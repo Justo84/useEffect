@@ -13,10 +13,11 @@ const Login = (props) => {
 
   useEffect(() => {
 
-    const timer = setTimeout(
+    const timer = setTimeout(() => {
+      console.log("in the timer")
       setFormIsValid(
       enteredEmail.includes('@') && enteredPassword.trim().length > 6
-    ), 500)
+    )}, 1000)
 
     return () => {
       clearTimeout(timer)
@@ -33,13 +34,10 @@ const Login = (props) => {
   };
 
   const validateEmailHandler = () => {
-    console.log(`validateEmailHandler`)
     setEmailIsValid(enteredEmail.includes('@'));
-    console.log(`useState emailvalid: ${emailIsValid}`)
   };
 
   const validatePasswordHandler = () => {
-    console.log("validatePasswordHandler")
     setPasswordIsValid(enteredPassword.trim().length > 6);
   };
 
