@@ -47,14 +47,16 @@ const Login = (props) => {
 
   const emailChangeHandler = (event) => {
     dispatchEmail({type: 'USER_INPUT', val: event.target.value})
+    setFormIsValid(
+      emailState.isValid && passwordState.isValid
+    )
   };
 
   const passwordChangeHandler = (event) => {
-    // setEnteredPassword(event.target.value);
     dispatchPassword({type: 'USER_INPUT', val: event.target.value})
-    // setFormIsValid(
-    //   emailState.isValid && event.target.value.trim() > 6
-    // )
+    setFormIsValid(
+      emailState.isValid && passwordState.isValid
+    )
   };
 
   const validateEmailHandler = () => {
@@ -62,7 +64,6 @@ const Login = (props) => {
   };
 
   const validatePasswordHandler = () => {
-    // setPasswordIsValid(enteredPassword.trim().length > 6);
     dispatchPassword({type: 'INPUT_BLUR'})
   };
 
