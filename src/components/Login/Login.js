@@ -51,10 +51,10 @@ const Login = (props) => {
 
   const passwordChangeHandler = (event) => {
     // setEnteredPassword(event.target.value);
-    dispatchPassword({type: 'USER_INPUT', val: event.targat.value})
-    setFormIsValid(
-      emailState.isValid && event.target.value.trim() > 6
-    )
+    dispatchPassword({type: 'USER_INPUT', val: event.target.value})
+    // setFormIsValid(
+    //   emailState.isValid && event.target.value.trim() > 6
+    // )
   };
 
   const validateEmailHandler = () => {
