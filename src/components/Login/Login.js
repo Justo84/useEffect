@@ -39,7 +39,7 @@ const Login = (props) => {
       setFormIsValid(
         emailState.isValid && passwordState.isValid
         )}, 500)
-        
+
     return () => {
       clearTimeout(timer)
     }
@@ -47,16 +47,16 @@ const Login = (props) => {
 
   const emailChangeHandler = (event) => {
     dispatchEmail({type: 'USER_INPUT', val: event.target.value})
-    setFormIsValid(
-      emailState.isValid && passwordState.isValid
-    )
+    // setFormIsValid(
+    //   emailState.isValid && passwordState.isValid
+    // )
   };
 
   const passwordChangeHandler = (event) => {
     dispatchPassword({type: 'USER_INPUT', val: event.target.value})
-    setFormIsValid(
-      emailState.isValid && passwordState.isValid
-    )
+    // setFormIsValid(
+    //   emailState.isValid && passwordState.isValid
+    // )
   };
 
   const validateEmailHandler = () => {
