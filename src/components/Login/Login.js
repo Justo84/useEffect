@@ -36,13 +36,12 @@ const Login = (props) => {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      console.log("in the timer")
       setFormIsValid(
         emailState.isValid && passwordState.isValid
         )}, 500)
+        
     return () => {
       clearTimeout(timer)
-      console.log("useEffect cleanup")
     }
   }, [emailState, passwordState])
 
