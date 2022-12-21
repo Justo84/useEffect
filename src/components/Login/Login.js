@@ -34,10 +34,10 @@ const Login = (props) => {
   const [emailState, dispatchEmail] = useReducer(emailReducer, {value: "", isValid: null})
   const [passwordState, dispatchPassword] = useReducer(passwordReducer, {value: "", isValid: null})
 
-  const { isValid: emailIsValid } = emailState;
   // Takes the isValid value and assigns it to an Alias to be accessed elsewhere
+  const { isValid: emailIsValid } = emailState;
   const { isValid: passwordIsValid } = passwordState;
-
+  /// having useEffect only check isValid prevents it from running every time there is new input. Once it's Valid, it stops checking unless it becomes inValid
   useEffect(() => {
     const timer = setTimeout(() => {
       setFormIsValid(
