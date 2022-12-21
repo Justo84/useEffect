@@ -41,7 +41,7 @@ const Login = (props) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setFormIsValid(
-        emailState.isValid && passwordState.isValid
+        emailIsValid && passwordIsValid
         )}, 500)
 
     return () => {
